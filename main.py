@@ -4,7 +4,11 @@ import requests
 def main():
     loc = "http://universities.hipolabs.com/search?name=Young"
     results = requests.get(loc)
-    print(results)
+    if results.status_code != 200:
+        print("help!")
+        return
+    data = results.json()
+    print(data)
 
 
 # Press the green button in the gutter to run the script.
