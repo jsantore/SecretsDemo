@@ -1,6 +1,7 @@
 
 import requests
 
+
 def main():
     loc = "http://universities.hipolabs.com/search?name=Young"
     results = requests.get(loc)
