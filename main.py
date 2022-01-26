@@ -1,8 +1,9 @@
 import requests
+import secrets
 
 
 def main():
-    loc = "http://universities.hipolabs.com/search?name=Young"
+    loc = f"https://imdb-api.com/en/API/UserRatings/{secrets.secret_key}/tt7462410"
     results = requests.get(loc)
     if results.status_code != 200:
         print("help!")
